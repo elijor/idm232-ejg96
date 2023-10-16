@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+
+body { 
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+    max-width: 1920px;
+}
+
+#headercon {
+    background-color: #cccccc;
+    background-image: url("heroimg.png");
+    width: 100%;
+    max-width: 1800px;
+    height: max-content;
+    margin: 0;
+    padding: 10px 0 0;
+    /* position: absolute; */
+    background-position: 25% 75%;
+}
+#headercon h1 {
+    font-size: 64px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border-style: solid; */
+    border-color: #d85c32;
+    border-width: 5px;
+    color: #d85c32;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+    margin: 50px auto;
+    position: relative;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, .75);;
+    background-blend-mode: overlay;
+    border-radius: 20px;
+}
+
+#headercon h2 {
+    font-size: 28px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    color: #ffffff;
+    text-align: center;
+    /* padding: 15px; */
+    /* background-color: rgba(255, 255, 255, .75); */
+    width: 100%;
+    position: relative;
+    padding: 60px 0 20px;
+    background-image: linear-gradient( rgba(0,0,0,0), rgba(0,0,0, .75));
+    margin: 0;
+}
+
+h1 {
+    position: relative;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    position: relative;
+    height: fit-content;
+}
+
+h5 {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+/* -------------------------- FILTER Section--------------------------*/
+
+.protfilter {
+    margin-left: calc(15%/2);
+}
+.protfilter .protgro {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    margin: 25px 0;
+    display: block;
+}
+
+.protgro input {
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+
+.filterscon {
+    margin:0;
+    width:25%;
+    background-color: rgb(206, 206, 206);
+    height: 100vh;
+    display: block;
+    position: sticky;
+    top: 0;
+}
+
+.filterscon input[type=text] {
+    padding: 6px 6px 6px 10px;
+    border: none;
+
+    position: relative;
+    font-size: 18px;
+    border-radius: 20px 0 0 20px;
+    /* min-width: 300px; */
+    display: block;
+    width: 70%
+}
+
+.searchcon form{
+    margin: 50px auto;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+button.search {
+    border: none;
+    height: 33px;
+    border-radius: 0 20px 20px 0;
+    width: 15%;
+    background-color: #d85c32;
+}
+
+button.search svg {
+    padding: 1px;
+    height: 20px;
+    fill: white;
+}
+
+
+/* -------------------------- RECIPE Section --------------------------*/
+.wholerecipecon {
+    margin: 50px 0;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    /* height:max-content; */
+}
+
+/* -------------------------- RECIPE TILES SECTION --------------------------*/
+
+.recipecon {
+    width: 30%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .5));
+}
+
+.rectitle {
+    /* background-color: coral; */
+    padding: 5px 5px 5px 15px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient( rgba(0,0,0,0), rgba(0,0,0,1));
+    color: white;
+}
+
+.recipecon .rectitle h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin: 40px 0 5px;
+    text-wrap:wrap;
+}
+
+
+.recipecon .rectitle h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+    text-wrap:wrap;
+}
+
+.recipecon img {
+    width: 100%;
+    object-fit:cover;
+    height: 400px;
+}
+
+/* -------------------------- FOOTER SECTION --------------------------*/
+
+#footercon {
+    background-color: #d85c32;
+    padding: 20px;
+    position: relative;
+}
+
+#footercon h1 {
+    color: white;
+    font-size: 28px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+}
+
+/* -------------------------- Responsive --------------------------*/
+@media only screen and (max-width: 900px) {
+    #headercon h1  {
+        font-size: 48px;
+    }
+    #headercon h2, #footercon h1  {
+        font-size:24px;
+    }
+    .recipecon {
+        width: 45%;
+    }
+    .filterscon input[type=text] {
+        width: 60%;
+    }
+    button.search {
+        width: 20%;
+    }
+
+  }
+
+  @media only screen and (max-width: 560px) { 
+    .filterscon {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+    }
+    main {
+        flex-direction: column;
+    }
+
+    button.search {
+        width: 10%;
+    }
+
+    .protfilter {
+        margin-left: calc(30%/2);
+    }
+
+    .wholerecipecon {
+        width: 100%;
+    }
+
+  }
+
+  @media only screen and (max-width: 420px) { 
+    #headercon h1  {
+        font-size: 32px;
+        padding: 12px;
+    }
+    #headercon h2, #footercon h1   {
+        font-size:18px;
+
+    }
+    #footercon h1 {
+        padding: 10px;
+    }
+
+    .recipecon {
+        width: 80%;
+    }
+    /* #headercon {
+        padding: 25px 0;
+    } */
+  }
