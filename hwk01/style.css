@@ -1,3 +1,6 @@
+:root {
+    --maincolor: #ea5624;
+}
 * {
     box-sizing: border-box;
 }
@@ -15,7 +18,7 @@ body {
 
 #headercon {
     background-color: #cccccc;
-    background-image: url("heroimg.png");
+    background-image: url("heroimg2.png");
     width: 100%;
     max-width: 1800px;
     height: max-content;
@@ -28,9 +31,9 @@ body {
     font-size: 64px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* border-style: solid; */
-    border-color: #d85c32;
+    border-color: var(--maincolor);
     border-width: 5px;
-    color: #d85c32;
+    color: var(--maincolor);
     padding: 20px;
     text-align: center;
     font-weight: 700;
@@ -52,8 +55,9 @@ body {
     width: 100%;
     position: relative;
     padding: 60px 0 20px;
-    background-image: linear-gradient( rgba(0,0,0,0), rgba(0,0,0, .75));
+    background-image: linear-gradient( rgba(0,0,0,0), rgba(0,0,0, .7));
     margin: 0;
+    text-shadow: 3px 3px #000;
 }
 
 h1 {
@@ -69,41 +73,85 @@ main {
 }
 
 h5 {
+    color: var(--maincolor);
+    background-color: rgba(255, 255, 255, .8);
+    padding: 10px;
+    border-radius: 12px;
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    text-align: center;
+    width: fit-content;
+    margin: 50px auto;
 }
 
 
 /* -------------------------- FILTER Section--------------------------*/
 
 .protfilter {
-    margin-left: calc(15%/2);
+    /* margin-left: calc(15%/2); */
+    row-gap: 20px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    flex-direction: row;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
-.protfilter .protgro {
+label {
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 100%;
-    margin: 25px 0;
-    display: block;
+    background-color: white;
+    width:  max-content;
+    /* margin: 25px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    border: solid;
+    border-width: 3px;
+    border-color: var(--maincolor);
+    padding: 12px;
+    border-radius: 20px;
+    color: var(--maincolor);
+    font-weight: 500;
+    cursor: pointer;
 }
 
-.protgro input {
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    height: 16px;
-    width: 16px;
+
+input[type=checkbox] {
+    border-radius: 100%;
+    border: solid;
+    border-width: 2px;
+    height: 20px;
+    width: 20px;
+    border-color: var(--maincolor);
+    appearance:inherit;
 }
+
+input[type=checkbox]:checked {
+    border-color: white;
+    background-color: var(--maincolor);
+}
+
+label input[type=checkbox]:checked {
+    background-color: var(--maincolor);
+
+}
+
 
 .filterscon {
     margin:0;
     width:25%;
-    background-color: rgb(206, 206, 206);
+    background-color: #f7e0d8;
     height: 100vh;
-    display: block;
+    height: calc(100vh + 120px);
+    height: 100vh;
+    /* display: block; */
     position: sticky;
     top: 0;
+    /* padding-bottom: 66px; */
 }
 
 .filterscon input[type=text] {
@@ -112,7 +160,7 @@ h5 {
 
     position: relative;
     font-size: 18px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 12px 0 0 12px;
     /* min-width: 300px; */
     display: block;
     width: 70%
@@ -131,9 +179,10 @@ h5 {
 button.search {
     border: none;
     height: 33px;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 12px 12px 0;
     width: 15%;
-    background-color: #d85c32;
+    background-color: var(--maincolor);
+    cursor: point
 }
 
 button.search svg {
@@ -145,7 +194,7 @@ button.search svg {
 
 /* -------------------------- RECIPE Section --------------------------*/
 .wholerecipecon {
-    margin: 50px 0;
+    margin: 50px 0 116px;
     width: 75%;
     display: flex;
     flex-direction: row;
@@ -181,6 +230,7 @@ button.search svg {
     font-size: 20px;
     margin: 40px 0 5px;
     text-wrap:wrap;
+    text-shadow: 3px 3px #000;
 }
 
 
@@ -201,14 +251,16 @@ button.search svg {
 /* -------------------------- FOOTER SECTION --------------------------*/
 
 #footercon {
-    background-color: #d85c32;
-    padding: 20px;
-    position: relative;
+    background-color: var(--maincolor);
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 #footercon h1 {
     color: white;
-    font-size: 28px;
+    font-size: 18px;
     font-family:Verdana, Geneva, Tahoma, sans-serif ;
     text-align: center;
 }
@@ -219,7 +271,7 @@ button.search svg {
         font-size: 48px;
     }
     #headercon h2, #footercon h1  {
-        font-size:24px;
+        font-size: 24px;
     }
     .recipecon {
         width: 45%;
@@ -230,10 +282,14 @@ button.search svg {
     button.search {
         width: 20%;
     }
+    label {
+        font-size: 14px;
+        padding: 8px;
+    }
 
   }
 
-  @media only screen and (max-width: 560px) { 
+  @media only screen and (max-width: 625px) { 
     .filterscon {
         position: relative;
         width: 100%;
@@ -248,7 +304,12 @@ button.search svg {
     }
 
     .protfilter {
-        margin-left: calc(30%/2);
+        margin: 50px calc(30%/2);
+        column-gap: 12px;
+    }
+    label {
+        font-size: 18px;
+        padding: 10px;
     }
 
     .wholerecipecon {
@@ -276,4 +337,15 @@ button.search svg {
     /* #headercon {
         padding: 25px 0;
     } */
+  }
+
+  @media only screen and (max-width: 375px) { 
+    .protgro, label {
+        width: 100%;
+    }
+    .protfilter {
+        justify-content: center;
+        
+    }
+
   }
