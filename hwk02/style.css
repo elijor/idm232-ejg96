@@ -79,9 +79,27 @@ h5 {
 
 /* -------------------------- FILTER Section--------------------------*/
 
-.protfilter {
+button.cb {
+    visibility: hidden;
+}
+#resetprotein + label {
+    border-color: #7b7b7b;
+    color: #7b7b7b;
+}
+
+#resetprotein + label:hover {
+    background-color: #b5b5b5;
+    color: black;
+}
+
+#resetprotein + label:active {
+    background-color: #7b7b7b;
+    color: white;
+}
+
+.filter {
     /* margin-left: calc(15%/2); */
-    row-gap: 20px;
+    row-gap: 10px;
     /* text-align: center; */
     display: flex;
     align-items: center;
@@ -90,6 +108,7 @@ h5 {
     max-width: 80%;
     flex-wrap: wrap;
     margin: 0 auto;
+
 }
 label {
     font-size: 16px;
@@ -153,10 +172,10 @@ label input[type=checkbox]:checked {
     /* margin: 0 0 0 5%; */
 }
 
-.protfilter {
+/* .filter {
     justify-content: space-between;
     
-}
+} */
 
 .filterscon {
     margin:0;
@@ -206,6 +225,10 @@ button.search svg {
     padding: 1px;
     height: 20px;
     fill: white;
+}
+
+input[type=text]:focus {
+outline-color:  var(--maincolor);
 }
 
 
@@ -304,7 +327,7 @@ button.search svg {
         width: 100%;
         /* margin: 0 0 0 5%; */
     }
-    .protfilter {
+    .filter {
         justify-content: center;
     }
 }
@@ -365,8 +388,8 @@ button.search svg {
         width: 10%;
     }
 
-    .protfilter {
-        margin: 50px calc(30%/2);
+    .filter {
+        margin: 15px calc(30%/2) 50px;
         column-gap: 12px;
     }
     label {

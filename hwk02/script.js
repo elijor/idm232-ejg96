@@ -9,3 +9,13 @@
 //     labelcolor[index].style.color = "#ea5624"; // Restore the default color when unchecked
 //   }
 // };
+
+const resetButton = document.getElementById("resetprotein");
+
+resetButton.addEventListener("click", function() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"].cb');
+
+  checkboxes.forEach(checkbox => {
+    checkbox.checked = false; // Uncheck all checkboxes
+  });
+});
