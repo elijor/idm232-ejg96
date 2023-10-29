@@ -1,0 +1,372 @@
+:root {
+    --maincolor: #ea5624;
+    --seccolor: #f7e0d8;
+    --maingray: #7b7b7b;
+    --tintcolor: #ea562435;
+}
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#logo {
+    width: 200px;
+    border-radius: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+@keyframes arrowmovein {
+    0% { transform: translateX(0);}
+    50% { transform: translateX(-6px);}
+    100% { transform: translateX(0);}
+}
+
+@keyframes arrowmoveout {
+    0% { transform: translateX(-6px);}
+    100% { transform: translateX(0);}
+}
+
+h3 a {
+    text-decoration: underline;
+    color: var(--maincolor)
+}
+
+.goback {
+    margin: 40px 5% 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: fit-content;
+}
+
+.goback:hover {
+    cursor: pointer;
+}
+
+.goback:not(:hover) svg {
+    animation-name: arrowmoveout;
+    animation-duration: 250ms;
+    transition: transform 500ms ease ;
+    transform: translateX(0);
+    /* transition-duration: 500ms; */
+}
+
+.goback:hover svg {
+    /* transform: translateX(-10px);
+    transition-duration: 250ms;
+    animation-iteration-count: infinite; */
+    animation: arrowmovein 500ms infinite;
+  
+}
+
+/* .goback svg  */
+
+.goback svg {
+    width: 30px;
+    transform: translateX(0px);
+    transition-duration: 500ms;
+}
+
+main {
+    margin: 40px auto 0;
+    width: 90%;
+    position: relative;
+}
+
+html,body {
+    height: 100%;
+}
+
+body { 
+    margin: 0 auto;
+    position: relative;
+    white-space: nowrap;
+    max-width: 1920px;
+}
+
+h1, h2, h3, p, li {
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    margin: 0;
+    text-wrap: wrap;
+}
+
+strong {
+    color: var(--maincolor);
+}
+
+ol li{
+    list-style: none;
+}
+
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+.whitetext {
+    color: white;
+}
+
+.headercon, #footercon {
+    background-color: var(--maincolor);
+    padding: 20px 0;
+}
+
+.headercon img {
+    margin: 0 0 0 20px;
+}
+
+.title {
+    background-color: var(--seccolor);
+    font-size: 36px;
+    text-align: center;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.subtitle {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.heading {
+    color: var(--maincolor);
+    font-style: italic;
+    font-size: 28px;
+    margin-bottom: 10px;
+    /* margin: 0 0 20px 0; */
+}
+
+.mainsect {
+    margin-top: 80px;
+    height: fit-content;
+    /* height: 100%; */
+}
+
+p, li {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.flex {
+    display: flex;
+}
+
+.fwrap {
+    flex-wrap: wrap;
+}
+
+.row, .rowtoc {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column {
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.gap10 {
+    gap: 40px;
+}
+
+.twochild > * {
+    width: 47.5%;
+}
+
+.threech > * {
+    width: 31%;
+}
+
+.mainicon {
+    background-color: var(--seccolor);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.mainicon svg {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+    display: block;
+}
+
+.border {
+    border-style: solid;
+    border-color: var(--seccolor);
+    border-width: 5px;
+    border-radius: 20px;
+}
+
+.mainicon h3 {
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.mainicon h3:first-of-type {
+    font-size: 18px;
+}
+
+.mainicon h3:last-of-type {
+    font-size: 22px;
+    color: var(--maincolor);
+}
+img {
+    width: 100%;
+    border-radius: 20px;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+p {
+    text-wrap: wrap;
+}
+
+.stepcon p {
+    margin-top: 16px;
+}
+
+.stepcon {
+    margin-bottom: 40px;
+}
+
+.stepconimg {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.stepconimg h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 20px; 
+    background-image: linear-gradient( rgba(0,0,0,0), rgba(0,0,0,1));
+    text-shadow: 3px 3px #000;
+    font-size: 28px;
+}
+
+
+#footercon h1 {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* ------------- RESPONSIVE ------------- */
+
+@media only screen and (max-width: 1320px) { 
+
+    .mainicon {
+        width: 25%;
+    }
+}
+@media only screen and (max-width: 1290px) { 
+    .gap10 {
+        /* gap: 0; */
+        justify-content: space-between;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px) {  
+    p, li, .mainicon h3:first-of-type, .mainicon h3:last-of-type {
+        font-size: 16px;
+    }
+    p{
+        line-height: 24px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1065px) {  
+    /* .twochild > div {
+        width: 60%;
+    }
+    .twochild > img {
+        width: 35%;
+    } */
+
+    .gap10 {
+        gap: 40px ;
+    } 
+}
+
+
+@media only screen and (max-width: 1065px) {  
+    .threech > * {
+        width: 32%;
+    }
+  
+}
+
+@media only screen and (max-width: 800px) { 
+    .rowtoc {
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .mainicon {
+        flex-direction: row;
+        width: 100%;
+        justify-content: left;
+        align-items: center;
+        gap: 20px;
+    }
+    .mainicon h3:first-of-type, .mainicon h3:last-of-type {
+        font-size: 18px;
+    }
+    .iconsvg {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+        gap: 20px
+    }
+    .twochild > * {
+        width:100%;
+    }
+    img {
+        order: -1;
+    }
+    .mainicon h3:first-of-type, .mainicon h3:last-of-type {
+        font-size: 22px;
+    }
+    .mainicon {
+        gap: 60px;
+    }
+
+    .goback {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 500px) { 
+    .mainicon {
+        gap: 20px;
+    }
+    .mainicon h3:first-of-type, .mainicon h3:last-of-type {
+        font-size: 18px;
+    }
+    .title {
+        font-size: 24px;
+    }
+}
