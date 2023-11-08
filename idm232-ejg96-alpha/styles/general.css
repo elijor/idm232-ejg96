@@ -1,0 +1,18 @@
+#content {
+    text-align: center;
+}
+figure img {
+    max-width: 100%;
+}
+
+.oneRecOdd {
+    background-color: orchid;
+}
+
+.oneRec {
+    background-color: lightsalmon;
+}
+
+figure:nth-child(odd){
+    background-color: lightskyblue;
+}
