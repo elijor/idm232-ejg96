@@ -79,7 +79,8 @@
     <?php
       // Get all the recipes from "recipes" table in the "idm232" database
       consoleMsg("results is ; $results");
-      $query = "SELECT * FROM recipes";
+      $query = "SELECT * FROM Recipes";
+      print_r($query);
       $results = mysqli_query($db_connection, $query);
       // consoleMsg("results is ; $results");
       if ($results->num_rows > 0) {

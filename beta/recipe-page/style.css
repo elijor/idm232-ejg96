@@ -1,0 +1,453 @@
+:root {
+    --maincolor: #ea5624;
+}
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+
+body { 
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+    max-width: 1920px;
+}
+
+#headercon {
+    background-color: var(--maincolor);
+    /* background-image: url("heroimg3.png"); */
+    width: 100%;
+    /* max-width: 1800px; */
+    height: fit-content;
+    margin: 0;
+    /* padding: 10px 0 0; */
+    position: relative;
+}
+
+#headercon img{
+    width: 100%;
+    background-position: 100% 50%;
+
+}
+
+#headercon h2 {
+    font-size: 28px;
+    font-weight: 400;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    color: var(--maincolor);
+    text-align: center;
+    text-wrap: wrap;
+    /* padding: 15px; */
+    /* background-color: rgba(255, 255, 255, .75); */
+    width: 50%;
+    position: absolute;
+    padding: 60px 0 20px;
+    /* background-image: linear-gradient( rgba(0,0,0,0), rgba(0,0,0, .7)); */
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    /* text-shadow: 3px 3px #000; */
+}
+
+h1 {
+    position: relative;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    position: relative;
+    height: fit-content;
+}
+
+h5 {
+    color: var(--maincolor);
+    /* background-color: rgba(255, 255, 255, .8); */
+    /* padding: 10px; */
+    border-radius: 12px;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    width: fit-content;
+    margin: 50px auto 25px;
+}
+
+
+/* -------------------------- FILTER Section--------------------------*/
+
+button.cb {
+    visibility: hidden;
+}
+#resetprotein + label {
+    border-color: #7b7b7b;
+    color: #7b7b7b;
+}
+
+#resetprotein + label:hover {
+    background-color: #b5b5b5;
+    color: black;
+}
+
+#resetprotein + label:active {
+    background-color: #7b7b7b;
+    color: white;
+}
+
+.filter {
+    /* margin-left: calc(15%/2); */
+    row-gap: 10px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    flex-direction: row;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+label {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    width:  max-content;
+    /* margin: 25px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    border: solid;
+    border-width: 3px;
+    border-color: var(--maincolor);
+    padding: 12px;
+    border-radius: 12px;
+    color: var(--maincolor);
+    font-weight: 500;
+    appearance: unset;
+    width: 100%;
+}
+
+label:hover {
+    background-color: #ea562425;
+    /* color: white; */
+}
+
+button, label {
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+    background-color: var(--maincolor);
+    color: white;
+    font-weight: 700;
+}
+
+input[type=checkbox] {
+    border-radius: 100%;
+    border: solid;
+    border-width: 3px;
+    height: 0;
+    width: 0;
+    border-color: var(--maincolor);
+    visibility: hidden;
+    appearance: none;
+}
+
+input[type=checkbox]:checked {
+    border-color: white;
+    background-color: var(--maincolor);
+}
+
+label input[type=checkbox]:checked {
+    background-color: var(--maincolor);
+
+}
+
+.protgro {
+    width: 45%;
+    /* margin: 0 0 0 5%; */
+}
+
+/* .filter {
+    justify-content: space-between;
+    
+} */
+
+.filterscon {
+    margin:0;
+    width:25%;
+    background-color: #f7e0d8;
+    height: 100vh;
+    height: calc(100vh + 120px);
+    height: 100vh;
+    /* display: block; */
+    position: sticky;
+    top: 0;
+    /* padding-bottom: 66px; */
+}
+
+.filterscon input[type=text] {
+    padding: 6px 6px 6px 10px;
+    border: none;
+
+    position: relative;
+    font-size: 18px;
+    border-radius: 12px 0 0 12px;
+    /* min-width: 300px; */
+    display: block;
+    width: 70%
+}
+
+.searchcon form{
+    margin: 50px auto;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+button.search {
+    border: none;
+    height: 33px;
+    border-radius: 0 12px 12px 0;
+    width: 15%;
+    background-color: var(--maincolor);
+    cursor: point
+}
+
+button.search svg {
+    padding: 1px;
+    height: 20px;
+    fill: white;
+}
+
+input[type=text]:focus {
+outline-color:  var(--maincolor);
+}
+
+
+/* -------------------------- RECIPE Section --------------------------*/
+.wholerecipecon {
+    margin: 50px 0 116px;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    /* height:max-content; */
+}
+
+/* -------------------------- RECIPE TILES SECTION --------------------------*/
+
+.recipecon {
+    width: 30%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .5));
+    transition-duration: 250ms;
+}
+
+.recipecon:hover {
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, .35));
+    transform: translateX(-5px);
+    transform: translateY(-15px);
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+.recipecon:hover .rectitle h3 {
+    color: #f7e0d8;
+    transition-duration: 250ms;
+}
+
+.rectitle {
+    /* background-color: coral; */
+    padding: 5px 5px 5px 15px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient( rgba(0,0,0,0), rgba(0,0,0,1));
+    color: white;
+}
+
+.recipecon .rectitle h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin: 40px 0 5px;
+    text-wrap:wrap;
+    text-shadow: 3px 3px #000;
+    transition-duration: 250ms;
+}
+
+
+.recipecon .rectitle h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+    text-wrap:wrap;
+}
+
+.recipecon img {
+    width: 100%;
+    object-fit:cover;
+    height: 400px;
+}
+
+/* -------------------------- FOOTER SECTION --------------------------*/
+
+#footercon {
+    background-color: var(--maincolor);
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+#footercon h1 {
+    color: white;
+    font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+}
+
+/* -------------------------- Responsive --------------------------*/
+@media only screen and (max-width: 1150px) { 
+    .protgro {
+        width: 100%;
+        /* margin: 0 0 0 5%; */
+    }
+    .filter {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #headercon h1  {
+        font-size: 48px;
+    }
+    #headercon h2, #footercon h1  {
+        font-size: 24px;
+    }
+    .recipecon {
+        width: 45%;
+    }
+    .filterscon input[type=text] {
+        width: 60%;
+    }
+    button.search {
+        width: 20%;
+    }
+    label {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .filterscon {
+        width:35%;
+    }
+    .wholerecipecon {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 800px) { 
+    .recipecon {
+        width: 80%
+    }
+
+}
+
+@media only screen and (max-width: 600px) { 
+    h5 {
+        font-size: 20px;
+    }
+
+}
+
+  @media only screen and (max-width: 525px) { 
+    .filterscon {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+    }
+    main {
+        flex-direction: column;
+    }
+
+    button.search {
+        width: 10%;
+    }
+
+    .filter {
+        margin: 15px calc(30%/2) 50px;
+        column-gap: 12px;
+    }
+    label {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .wholerecipecon {
+        width: 100%;
+    }
+    #headercon h2 {
+        padding: 60px 5px 10px;
+        font-size: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 420px) { 
+    /* #headercon h1  {
+        font-size: 32px;
+        padding: 12px;
+    } */
+    #headercon h2, #footercon h1   {
+        font-size:18px;
+    }
+
+    #headercon h2 {
+        padding: 0 5px 8px;
+        font-size: 16px;
+    }
+    #footercon h1 {
+        padding: 10px;
+    }
+
+    .recipecon {
+        width: 80%;
+    }
+    /* #headercon {
+        padding: 25px 0;
+    } */
+  }
+
+  @media only screen and (max-width: 400px) { 
+    .protgro, label {
+        width: 100%;
+    }
+    .protfilter {
+        justify-content: center;
+        
+    }
+}
+
+    @media only screen and (min-width: 1920px) { 
+        body {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        body div, body main {
+            max-width: 100%;
+        }
+    }
