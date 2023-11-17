@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dish Discovery - Recipe Page</title>
+    <title>Dish Discovery - Recipe Detail Page</title>
     <link rel="stylesheet" href="style1.css">
   </head>
   <body>
@@ -17,45 +17,22 @@
 
 
     <?php
-    $dsn = 'mysql:host=' . $db_host . ';dbname=' . $db_name;
-try {
-    $pdo = new PDO($dsn, $db_user, $db_pass);
-} catch (PDOException $e) {
-    die('Connection failed: ' . $e->getMessage());
-};
 
-consoleMsg("dsn worked");
+    // $recipe_id = $_GET['id'];  
+    // if (isset($_GET['id'])) {
+    //     // Retrieve recipe data based on ID from the URL
+    //     $recipe_id = $_GET['id'];
+    //     $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+    //     $results = mysqli_query($db_connection, $query);
+    //     while ($oneRecipe = mysqli_fetch_array($results)) {
+    //     // echo '<p>' . $oneRecipe['Title'] . '</p>';
 
-    $recipe_id = $_GET['id'];  // Assuming the ID is passed through the URL
-    $stmt = $pdo->prepare('SELECT * FROM Recipes WHERE id = :recipe_id');
-    $stmt->bindParam(':recipe_id', $recipe_id, PDO::PARAM_INT);
-    $stmt->execute();
-    
-    // Fetch the data
-    $recipe = $stmt->fetch(PDO::FETCH_ASSOC);
-    consoleMsg("fetch asssoc worked");
-  
-    if (isset($_GET['id'])) {
-        // Retrieve recipe data based on ID from the URL
-        $recipe_id = $_GET['id'];
-
-        $stmt = $pdo->prepare('SELECT * FROM Recipes WHERE id = :recipe_id');
-        $stmt->bindParam(':recipe_id', $recipe_id, PDO::PARAM_INT);
-        $stmt->execute();
-    
-        // Fetch the data
-        $oneRecipe = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-        // If a recipe with the specified ID is not found, you might want to handle that case
-        if (!$oneRecipe) {
-            echo "Recipe not found.";
-            // You can redirect the user, show an error message, etc.
-        }
-    };
-    consoleMsg("before null worked");
+    //     };
+    // };
+    consoleMsg("it loaded atleast");
  
     // Close the database connection
-    $pdo = null;
+    // $pdo = null;
     ?>
     <div class="headercon">
 
@@ -74,12 +51,28 @@ consoleMsg("dsn worked");
             <div class="column gap10 flex">
                 <div>
                     <h1 class="title">
-                    <?php echo $oneRecipe['Title'];
-                      consoleMsg("Line 93 all good"); 
+                    <?php $recipe_id = $_GET['id'];  
+                        if (isset($_GET['id'])) {
+                            // Retrieve recipe data based on ID from the URL
+                            $recipe_id = $_GET['id'];
+                            $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                            $results = mysqli_query($db_connection, $query);
+                            while ($oneRecipe = mysqli_fetch_array($results)) {
+                                echo $oneRecipe['Title'];
+                            };
+                        };
                       ?>
                     </h1>
                     <h2 class="subtitle">
-                    <?php echo $oneRecipe['Subtitle'];
+                    <?php 
+                    if (isset($_GET['id'])) {
+                        $recipe_id = $_GET['id'];
+                        $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                        $results = mysqli_query($db_connection, $query);
+                        while ($oneRecipe = mysqli_fetch_array($results)) {
+                            echo $oneRecipe['Subtitle'];
+                        };
+                    };
                      ?>
                     </h1>
                     </h2>
@@ -90,7 +83,14 @@ consoleMsg("dsn worked");
                     </h2>
                     <p class="recdescript">
                         <?php
-                        echo $oneRecipe['Description'];
+                           if (isset($_GET['id'])) {
+                            $recipe_id = $_GET['id'];
+                            $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                            $results = mysqli_query($db_connection, $query);
+                            while ($oneRecipe = mysqli_fetch_array($results)) {
+                                echo $oneRecipe['Description'];
+                            };
+                        };
                         ?>
                         <!-- We're amping up chicken breasts with a glaze of smoky ancho chile paste and fresh orange juice in this recipe. On the side, roasted carrots and lightly creamy, golden raisin-studded rice perfectly accent the sweetness of the glaze. -->
                     </p>
@@ -104,7 +104,15 @@ consoleMsg("dsn worked");
                             Cook Time
                         </h3>
                         <h3>
-                        <?php echo $oneRecipe['Cook Time'];
+                        <?php 
+                        if (isset($_GET['id'])) {
+                            $recipe_id = $_GET['id'];
+                            $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                            $results = mysqli_query($db_connection, $query);
+                            while ($oneRecipe = mysqli_fetch_array($results)) {
+                                echo $oneRecipe['Cook Time'];
+                            };
+                        };
                         ?>
                         </h3>
                     </div>
@@ -115,7 +123,15 @@ consoleMsg("dsn worked");
                             Servings
                         </h3>
                         <h3>
-                        <?php echo $oneRecipe['Servings'];
+                        <?php
+                          if (isset($_GET['id'])) {
+                            $recipe_id = $_GET['id'];
+                            $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                            $results = mysqli_query($db_connection, $query);
+                            while ($oneRecipe = mysqli_fetch_array($results)) {
+                                echo $oneRecipe['Servings'];
+                            };
+                        };
                         ?>
                         </h3>
                     </div>
@@ -127,20 +143,42 @@ consoleMsg("dsn worked");
                             Calories
                         </h3>
                         <h3>
-                        <?php echo $oneRecipe['Cal/Serving'];
+                        <?php 
+                         if (isset($_GET['id'])) {
+                            $recipe_id = $_GET['id'];
+                            $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                            $results = mysqli_query($db_connection, $query);
+                            while ($oneRecipe = mysqli_fetch_array($results)) {
+                                echo $oneRecipe['Cal/Serving'];
+                            };
+                        };
                          ?>
                         </h3>
                     </div>
                 </div>
             </div>
             <?php
-                echo '<img src="./../imgs/'.$oneRecipe['Main IMG'] . '" " alt="Dish image">';
+             if (isset($_GET['id'])) {
+                $recipe_id = $_GET['id'];
+                $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                $results = mysqli_query($db_connection, $query);
+                while ($oneRecipe = mysqli_fetch_array($results)) {
+                    echo '<img src="./../imgs/'.$oneRecipe['Main IMG'] . '" " alt="Dish image">';
+                };
+            };
             ?>
             <!-- <img src="imgs/0101_FPP_Chicken-Rice_97338_WEB_SQ.jpg" alt="placeholder"> -->
         </div>
         <div class="mainsect row flex twochild">
              <?php
-                echo '<img class="border" src="./../imgs/recipe-ing-imgs/'.$oneRecipe['Ingredients IMG'] . '" " alt="All Ingredients">';
+              if (isset($_GET['id'])) {
+                $recipe_id = $_GET['id'];
+                $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                $results = mysqli_query($db_connection, $query);
+                while ($oneRecipe = mysqli_fetch_array($results)) {
+                    echo '<img class="border" src="./../imgs/recipe-ing-imgs/'.$oneRecipe['Ingredients IMG'] . '" " alt="All Ingredients">';
+                };
+            };
             ?>
             <!-- <img class="border" src="imgs/0101_ING_FPP_large_feature.png" alt="placeholder"> -->
             <div class="column flex">
@@ -149,27 +187,30 @@ consoleMsg("dsn worked");
                 </h2>
                 <!-- <ol> -->
                     <?php
+                    if (isset($_GET['id'])) {
+                        $recipe_id = $_GET['id'];
+                        $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                        $results = mysqli_query($db_connection, $query);
+                        while ($oneRecipe = mysqli_fetch_array($results)) {
+             
+            
                     function keyExists($oneRecipe, $key) {
                         return isset($oneRecipe[$key]) && !empty($oneRecipe[$key]);
                       };
                     if (keyExists($oneRecipe, 'All Ingredients')) {
-                        // Split the ingredients using the asterisk as a delimiter
                         $ingredientsArray = explode('*', $oneRecipe['All Ingredients']);
                     
                         // Trim each ingredient to remove extra whitespaces
                         $ingredientsArray = array_map('trim', $ingredientsArray);
-                    
-                        // Display the ingredients as list items
-                        // if (!empty($ingredientsArray)) {
                             echo '<ol>';
                             foreach ($ingredientsArray as $ingredient) {
                                 echo '<li>' . $ingredient . '</li>';
                             }
                             echo '</ol>';
-                        // }
                     } else {
                         echo 'No ingredients available.';
-                    }
+                    }           
+                 }; }
                     ?>
             </div>
         </div>
@@ -179,65 +220,82 @@ consoleMsg("dsn worked");
             </h2>
             <div class="row flex fwrap twochild">
             <?php
-                $originalSteps = $oneRecipe['All Steps']; 
+            if (isset($_GET['id'])) {
+                $recipe_id = $_GET['id'];
+                $query = "SELECT * FROM Recipes WHERE id = $recipe_id ";
+                $results = mysqli_query($db_connection, $query);
+                while ($oneRecipe = mysqli_fetch_array($results)) {
+     
+                    $originalSteps2 = explode('*', $oneRecipe['All Steps']);
+                    $stepImgsArray = explode("*", $oneRecipe['Step IMGs']);
 
-                function applyRules($originalSteps) {
-                
-                    $originalSteps = str_replace(':*', ': ', $originalSteps);
-
-                    // Rule three: Find numbers as the first or second character after "*"
-                    if (preg_match('/\*(\d)/', $originalSteps, $matches)) {
-                        // Check if there is another "*" 30 characters or less after the first number
-                        $positionOfFirstNumber = strpos($originalSteps, $matches);
-                        $positionOfSecondStar = strpos($originalSteps, '*', $positionOfFirstNumber + 1);
-                
-                        if ($positionOfSecondStar === false || $positionOfSecondStar - $positionOfFirstNumber > 100) {
-                            // If not, add a "*" immediately after the first number
-                            $originalSteps = preg_replace('/\*(\d)/', '*$1*', $originalSteps);
+                // echo '<p> Number of steps is' . count($originalSteps2) .' </p>';
+                    for($lp = 0; $lp < count($originalSteps2 ); $lp++) {
+                        $firstChar = substr($originalSteps2[$lp], 0, 1);
+                        // echo '<p> this is the first character' . $firstChar . '</p>';
+                        if (is_numeric($firstChar)){
+                            echo '<img src="./../imgs/recipe-steps-imgs/' . $stepImgsArray[$firstChar-1] . '" alt="Dish image">';
                         }
                     }
-                    // ignore her below
-                    if (preg_match('/\b1\b/', $originalSteps)) {
-                        $positionOfFirstOne = strpos($originalSteps, '1');
-                        $positionOfSecondStarOne = strpos($originalSteps, '*', $positionOfFirstOne + 1);
+                }
+            }
+                // function applyRules($originalSteps) {
                 
-                        if ($positionOfSecondStarOne === false || $positionOfSecondStarOne - $positionOfFirstOne > 30) {
-                            // If not, add a "*" immediately after the first number 1
-                            $originalSteps = preg_replace('/(?<!\*)1/', '1*', $originalSteps, 1); // Limit to one replacement
-                        } 
-                    }
-                    $originalSteps = str_replace('**', '*', $originalSteps);
-                    $originalSteps = str_replace("\"&\"", "", $originalSteps);
-                    //$originalSteps = "hi*hi";
+                //     $originalSteps = str_replace(':*', ': ', $originalSteps);
+
+                //     // Rule three: Find numbers as the first or second character after "*"
+                //     if (preg_match('/\*(\d)/', $originalSteps, $matches)) {
+                //         // Check if there is another "*" 30 characters or less after the first number
+                //         $positionOfFirstNumber = strpos($originalSteps, $matches);
+                //         $positionOfSecondStar = strpos($originalSteps, '*', $positionOfFirstNumber + 1);
+                
+                //         if ($positionOfSecondStar === false || $positionOfSecondStar - $positionOfFirstNumber > 100) {
+                //             // If not, add a "*" immediately after the first number
+                //             $originalSteps = preg_replace('/\*(\d)/', '*$1*', $originalSteps);
+                //         }
+                //     }
+                //     // ignore her below
+                //     if (preg_match('/\b1\b/', $originalSteps)) {
+                //         $positionOfFirstOne = strpos($originalSteps, '1');
+                //         $positionOfSecondStarOne = strpos($originalSteps, '*', $positionOfFirstOne + 1);
+                
+                //         if ($positionOfSecondStarOne === false || $positionOfSecondStarOne - $positionOfFirstOne > 30) {
+                //             // If not, add a "*" immediately after the first number 1
+                //             $originalSteps = preg_replace('/(?<!\*)1/', '1*', $originalSteps, 1); // Limit to one replacement
+                //         } 
+                //     }
+                //     $originalSteps = str_replace('**', '*', $originalSteps);
+                //     $originalSteps = str_replace("\"&\"", "", $originalSteps);
+                //     //$originalSteps = "hi*hi";
             
-                    return $originalSteps;
+                //     return $originalSteps;
 
-                } 
+                // };
 
-                $output = applyRules($originalSteps);
-                // print_r($output);
+                // $output = applyRules($originalSteps);
+                // // print_r($output);
 
-                    if (keyExists($oneRecipe, 'Step IMGs')) { 
-                        $iteration = 0;
+                //     if (keyExists($oneRecipe, 'Step IMGs')) { 
+                //         $iteration = 0;
 
-                        $stepsIMGArray = explode('*', $oneRecipe['Step IMGs']);
+                //         $stepsIMGArray = explode('*', $oneRecipe['Step IMGs']);
 
-                        $newNewAllSteps = explode('*', $output);
+                //         $newNewAllSteps = explode('*', $output);
 
-                            for ($x = 0; $x < count($stepsIMGArray); $x++) {
+                //             for ($x = 0; $x < count($stepsIMGArray); $x++) {
                             
-                                echo '<div class="stepcon flex column">';
-                                echo '<div class="stepconimg">';
-                                echo '<h3> Step ' . $newNewAllSteps[$x*2] . '</h3>';
-                                echo '<img src="./../imgs/recipe-steps-imgs/'. $stepsIMGArray[$x] .'"  alt="step food imgs">';
-                                echo '</div>';
-                                echo '<p>' . $newNewAllSteps[$x*2+1] . '</p>';
-                                echo '</div>';
-                            };
+                //                 echo '<div class="stepcon flex column">';
+                //                 echo '<div class="stepconimg">';
+                //                 echo '<h3> Step ' . $newNewAllSteps[$x*2] . '</h3>';
+                //                 echo '<img src="./../imgs/recipe-steps-imgs/'. $stepsIMGArray[$x] .'"  alt="step food imgs">';
+                //                 echo '</div>';
+                //                 echo '<p>' . $newNewAllSteps[$x*2+1] . '</p>';
+                //                 echo '</div>';
+                //             };
 
-                    } else {
-                        echo 'No steps available.';
-                    } 
+                //     } else {
+                //         echo 'No steps available.';
+                //     } 
                     ?>
                     
                 <!-- <div class="stepcon flex column">

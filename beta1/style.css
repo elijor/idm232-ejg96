@@ -9,6 +9,10 @@ html,body {
     height: 100%;
 }
 
+a {
+    width: 30%;
+}
+
 body { 
     margin: 0;
     position: relative;
@@ -247,7 +251,7 @@ outline-color:  var(--maincolor);
 /* -------------------------- RECIPE TILES SECTION --------------------------*/
 
 .recipecon {
-    width: 30%;
+    width: 100%;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -339,7 +343,7 @@ outline-color:  var(--maincolor);
     #headercon h2, #footercon h1  {
         font-size: 24px;
     }
-    .recipecon {
+    a {
         width: 45%;
     }
     .filterscon input[type=text] {
@@ -361,7 +365,7 @@ outline-color:  var(--maincolor);
 }
 
 @media only screen and (max-width: 800px) { 
-    .recipecon {
+    a {
         width: 80%
     }
 
@@ -423,7 +427,7 @@ outline-color:  var(--maincolor);
         padding: 10px;
     }
 
-    .recipecon {
+    a {
         width: 80%;
     }
     /* #headercon {
