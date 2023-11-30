@@ -1,6 +1,6 @@
 :root {
     --maincolor: #ea5624;
-    --seccolor: #f7e0d8;
+    --seccolor: #ffe3d7;
     --maingray: #7b7b7b;
     --tintcolor: #ea562435;
 }
@@ -40,6 +40,10 @@ h3 a {
     justify-content: left;
     width: fit-content;
 }
+
+.goback:last-of-type {
+    margin-bottom: 40px
+} 
 
 .goback:hover {
     cursor: pointer;

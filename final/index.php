@@ -108,13 +108,13 @@
 
 
 
-      $isCheckedChi = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Chicken'") ? 'checked' : '';
-      // $isCheckedBee = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Beef'") ? 'checked' : '';
-      $isCheckedVeg = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Vegitarian'") ? 'checked' : '';
-      $isCheckedFis = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Fish'") ? 'checked' : '';
-      $isCheckedPor = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Pork'") ? 'checked' : '';
-      $isCheckedSte = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Steak'") ? 'checked' : '';
-      $isCheckedTur = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Turkey'") ? 'checked' : '';
+      // $isCheckedChi = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Chicken'") ? 'checked' : '';
+      // // $isCheckedBee = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Beef'") ? 'checked' : '';
+      // $isCheckedVeg = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Vegitarian'") ? 'checked' : '';
+      // $isCheckedFis = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Fish'") ? 'checked' : '';
+      // $isCheckedPor = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Pork'") ? 'checked' : '';
+      // $isCheckedSte = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Steak'") ? 'checked' : '';
+      // $isCheckedTur = ($query == "SELECT * FROM Recipes WHERE Proteine LIKE 'Turkey'") ? 'checked' : '';
 
     
     // Get the selected checkboxes from the form submission
@@ -131,12 +131,14 @@
           <svg fill="#000000"  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 183.792 183.792" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22 c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583 c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0 C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806 c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25 c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z"></path> </g></svg>
         </button>
         </form>
+        <div id="fitboth">
         <h5>
-          Protein Filter
-          <!-- <svg width="24px" height="8.4px" viewBox="0 0 120 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.71666 0C0.597155 0 -1.21429 6.78082 3.22319 9.33389L57.5065 40.5654C59.0502 41.4535 60.9498 41.4535 62.4935 40.5654L116.777 9.33389C121.214 6.78082 119.403 0 114.283 0H5.71666Z" fill="#EA5624"/>
-            </svg> -->
+          Protein Filter          
         </h5>
+        <div id="expandFilter" onClick="toggleSVG()" class="expand">
+          <svg id="svgElement" width="60px" height="60px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ea5624"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="16" height="16" id="icon-bound" fill="none"></rect> <polygon points="8,13 0,5 16,5"></polygon> </g></svg>
+          </div>
+    </div>
 
         <!-- <div id="protfilter" > -->
         <form id="filtersform" method="POST" class="filter" >

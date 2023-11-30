@@ -2,6 +2,8 @@
     --maincolor: #ea5624;
     --seccolor: #ffce2d; 
     --tertcolor: #dfa209;
+    --coloralt: #ffe3d7;
+    
 }
 * {
     box-sizing: border-box;
@@ -79,7 +81,7 @@ h5 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     width: fit-content;
-    margin: 50px auto 25px;
+    margin: 50px auto 10px;
 }
 
 
@@ -89,12 +91,18 @@ h5 {
 
 button.cb, #filtersubmit {
     visibility: hidden;
+    
 }
 
 #filtersubmit + label {
-    background-color: var(--seccolor);
-    border-color: var(--tertcolor);
-    color: black;
+    background-color: var(--maincolor);
+    border-color: #00000000;
+    color: white;
+}
+
+#filtersubmit + label:hover {
+    background-color: #c33a0c;
+
 }
 
 #resetprotein + label {
@@ -147,16 +155,17 @@ label {
 }
 
 label:hover {
-    background-color: #ea562425;
+    background-color: #f7e0d8;
     /* color: white; */
 }
 
 button, label {
     cursor: pointer;
+
 }
 
 input[type=checkbox]:checked + label {
-    background-color: var(--maincolor);
+    background-color: #ea5624;
     color: white;
     font-weight: 700;
 }
@@ -170,6 +179,7 @@ input[type=checkbox] {
     border-color: var(--maincolor);
     visibility: hidden;
     appearance: none;
+
 }
 
 input[type=checkbox]:checked {
@@ -181,10 +191,11 @@ label input[type=checkbox]:checked {
     background-color: var(--maincolor);
 }
 
-/* #filtersform {
-    display: flex;
-    flex-direction: ;
-} */
+input[type=checkbox]:checked:hover {
+    background-color: #ffffff50;
+
+}
+
 
 .protgro {
     width: 48%;
@@ -199,7 +210,7 @@ label input[type=checkbox]:checked {
 .filterscon {
     margin:0;
     width:25%;
-    background-color: #f7e0d8;
+    background-color: var(--coloralt);
     height: 100vh;
     height: calc(100vh + 120px);
     height: 100vh;
@@ -249,6 +260,25 @@ input[type=search]:focus {
 outline-color:  var(--maincolor);
 }
 
+form#filtersform.filter {
+    margin-top: 0;
+    /* margin-bottom: 0; */
+    /* transition-duration: 0s; */
+
+}
+
+form#filtersform.filter:hover {
+    cursor: default;
+}
+
+#expandFilter {
+    visibility: hidden;
+    width:0;
+}
+
+#fitboth {
+    height: 40px;
+}
 
 /* -------------------------- RECIPE Section --------------------------*/
 .wholerecipecon {
@@ -283,7 +313,7 @@ outline-color:  var(--maincolor);
 }
 
 .recipecon:hover .rectitle h3 {
-    color: #f7e0d8;
+    color: var(--coloralt);
     transition-duration: 250ms;
 }
 
@@ -361,7 +391,7 @@ outline-color:  var(--maincolor);
         width: 45%;
     }
     .filterscon input[type=search] {
-        width: 60%;
+        width: 70%;
     }
     button.search {
         width: 20%;
@@ -385,14 +415,7 @@ outline-color:  var(--maincolor);
 
 }
 
-@media only screen and (max-width: 600px) { 
-    h5 {
-        font-size: 20px;
-    }
-
-}
-
-  @media only screen and (max-width: 525px) { 
+  @media only screen and (max-width: 675px) { 
     .filterscon {
         position: relative;
         width: 100%;
@@ -400,6 +423,16 @@ outline-color:  var(--maincolor);
     }
     main {
         flex-direction: column;
+    }
+    #fitboth {
+        margin: 0 auto;
+        height: auto;
+        width:80%;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch ;
+        justify-content: center;
+        gap: 20px;
     }
 
     button.search {
@@ -413,6 +446,8 @@ outline-color:  var(--maincolor);
     label {
         font-size: 18px;
         padding: 10px;
+        transition-duration: 250ms;
+
     }
 
     .wholerecipecon {
@@ -422,6 +457,39 @@ outline-color:  var(--maincolor);
         padding: 60px 5px 10px;
         font-size: 20px;
     }
+
+    #expandFilter {
+        visibility: visible;
+        width:50px;
+
+    }
+    #filtersform {
+        height:0;
+        margin:0 auto;
+        opacity: 0;
+        transition: height .5s, margin .5s, opacity .5s;
+
+        }
+
+    /* #svgElement {
+        width: 100%
+    } */
+
+    h5 {
+        font-size: 32px;
+        margin:0;
+
+    }
+
+    /* #filtersform.expand  */
+
+
+    #filtersform.expand {
+        height:691.5px;
+        margin: 0 auto 50px;
+        opacity: 100%;
+        transition: height .5s, margin .5s, opacity .5s;
+    } 
   }
 
   @media only screen and (max-width: 420px) { 
@@ -441,6 +509,17 @@ outline-color:  var(--maincolor);
         padding: 10px;
     }
 
+    h5 {
+        font-size: 24px;
+    }
+    #fitboth {
+    height: 40px
+    }
+
+    #svgElement {
+        width: 150%;
+        height: 100%;
+    }
     a {
         width: 80%;
     }
