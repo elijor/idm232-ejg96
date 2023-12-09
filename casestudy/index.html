@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylecs.css">
+
+    <title>IDM232 Case Study</title>
+</head>
+<body>
+    <header>
+        <picture class="graphic heroimg">
+            <!-- Source for smaller screens -->
+            <source srcset="imgs-folder/hero-img-mob.png" media="(max-width: 600px)">
+            <!-- Source for larger screens -->
+            <source srcset="imgs-folder/hero-img.png">
+            <!-- Default image for browsers that don't support the picture element -->
+            <img src="fallback-image.jpg" alt="Description of the image">
+        </picture>
+        <h1>
+            Exploring PHP and Seamless Database Integration with <strong> Dish Discovery </strong>
+        </h1>
+    </header>
+    <main>
+        <div class="sec text-container1">
+            <div class="numcon">
+                <h2>
+                    1
+                </h2>
+            </div>
+            <div class="textcon">
+                <h3>
+                    Overview
+                </h3>
+                <p>
+                    In this project, my goal was to familiarize myself with PHP, explore database integration, and apply these skills to design systems. Utilizing HTML, CSS, JavaScript, and PHP, I developed a dynamic recipe website. The project showcased my ability to create an intuitive user interface, emphasizing seamless functionality and an attractive design. Although it was my first experience with PHP, the project marked a significant learning curve, and I can now confidently navigate and utilize PHP effectively.
+                </p>
+            </div>
+        </div>
+        <div class="sec text-container1">
+            <div class="numcon">
+                <h2>
+                    2
+                </h2>
+            </div>
+            <div class="textcon">
+                <h3>
+                    Context &amp; Challenges
+                </h3>
+                <h4>
+                    Context
+                </h4>
+                <p>
+                    Previously, I'd learned HTML, CSS, and Javascript in previous classes leading up to this one, but the primary focus of many of my classes was UI design and UX research.
+                </p>
+            </div>
+        </div>
+        <div class="text-container1">
+            <div class="numcon si">
+                <div class="small-icon">
+                    <svg width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51.5" cy="51.5" r="49" fill="white" stroke="#315AC5" stroke-width="5"/>
+                        <path d="M51 11.1666C73.5522 11.1666 91.8333 29.4477 91.8333 52C91.8333 74.5522 73.5522 92.8333 51 92.8333C28.4477 92.8333 10.1667 74.5522 10.1667 52C10.1667 29.4477 28.4477 11.1666 51 11.1666ZM51 27.5C49.917 27.5 48.8784 27.9302 48.1126 28.6959C47.3469 29.4617 46.9167 30.5003 46.9167 31.5833V52C46.9169 53.0828 47.3472 54.1213 48.1131 54.8869L60.3631 67.1369C61.1332 67.8807 62.1647 68.2923 63.2353 68.283C64.3059 68.2737 65.3301 67.8442 66.0872 67.0871C66.8442 66.33 67.2737 65.3059 67.283 64.2353C67.2923 63.1646 66.8807 62.1332 66.1369 61.363L55.0833 50.3095V31.5833C55.0833 30.5003 54.6531 29.4617 53.8873 28.6959C53.1216 27.9302 52.083 27.5 51 27.5Z" fill="#315AC5"/>
+                        </svg>
+                </div>
+            </div>
+            <div class="textcon">
+                <h4>
+                    Timeline
+                </h4>
+                <p>
+                    This course was a 10 week class. The initial weeks were dedicated to establishing a static homepage and individual recipe page design in terms of layout before incorporating the database into the code. Later, PHP and the database were integrated along with key functions that would contribute to a positive user experience. Finally, minor tweaks and micro interactions were added and the site was quality tested to ensure any bugs that occurred within the site or database had been addressed.
+                </p>
+            </div>
+        </div>
+        <picture class="graphic">
+            <!-- Source for smaller screens -->
+            <source srcset="imgs-folder/timeline-img-mob.png" media="(max-width: 600px)">
+            <!-- Source for larger screens -->
+            <source srcset="imgs-folder/timeline-img.png">
+            <!-- Default image for browsers that don't support the picture element -->
+            <img src="imgs-folder/timeline-img.png" alt="Description of the image">
+        </picture>
+        <div class="text-container1">
+            <div class="numcon si">
+                <div class="small-icon">
+                    <svg width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51.5" cy="51.5" r="49" fill="white" stroke="#315AC5" stroke-width="5"/>
+                        <path d="M51 72.5C52.1617 72.5 53.1361 72.1064 53.9233 71.3192C54.7105 70.532 55.1027 69.5589 55.1 68.4C55.1 67.2383 54.7064 66.2653 53.9192 65.4808C53.132 64.6963 52.1589 64.3027 51 64.3C49.8383 64.3 48.8653 64.6936 48.0808 65.4808C47.2963 66.268 46.9027 67.2411 46.9 68.4C46.9 69.5617 47.2936 70.5361 48.0808 71.3233C48.868 72.1105 49.8411 72.5027 51 72.5ZM46.9 56.1H55.1V31.5H46.9V56.1ZM51 93C45.3283 93 39.9983 91.9231 35.01 89.7692C30.0217 87.6153 25.6825 84.6948 21.9925 81.0075C18.3025 77.3175 15.3819 72.9783 13.2308 67.99C11.0797 63.0017 10.0027 57.6717 10 52C10 46.3283 11.0769 40.9983 13.2308 36.01C15.3847 31.0217 18.3052 26.6825 21.9925 22.9925C25.6825 19.3025 30.0217 16.3819 35.01 14.2308C39.9983 12.0797 45.3283 11.0027 51 11C56.6717 11 62.0017 12.0769 66.99 14.2308C71.9783 16.3847 76.3175 19.3052 80.0075 22.9925C83.6975 26.6825 86.6194 31.0217 88.7733 36.01C90.9272 40.9983 92.0027 46.3283 92 52C92 57.6717 90.9231 63.0017 88.7692 67.99C86.6153 72.9783 83.6948 77.3175 80.0075 81.0075C76.3175 84.6975 71.9783 87.6194 66.99 89.7733C62.0017 91.9272 56.6717 93.0027 51 93Z" fill="#315AC5"/>
+                        </svg>
+                </div>
+            </div>
+            <div class="textcon">
+                <h4>
+                    The Problem
+                </h4>
+                <p>
+                    Create a functional and responsive recipe site that pulls from a database using PHP and database integration.There should only be two unique pages, the main recipe search page, and a recipe detail page that should fill in with the information of the selected recipe.
+                </p>
+            </div>
+        </div>
+        <div class="endsec text-container1">
+            <div class="numcon si">
+                <div class="small-icon">
+                    <svg width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51.5" cy="51.5" r="49" fill="white" stroke="#315AC5" stroke-width="5"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M67.6765 9.86969L55.0743 22.4659C55.0736 22.4667 55.0728 22.4674 55.0721 22.4682C54.5569 22.9858 54.1024 23.5605 53.7175 24.1811L52.8376 25.6H51C45.7786 25.6 40.6744 27.1483 36.3329 30.0492C31.9915 32.9501 28.6077 37.0732 26.6096 41.8972C24.6114 46.7211 24.0886 52.0293 25.1073 57.1504C26.1259 62.2715 28.6403 66.9755 32.3324 70.6676C36.0245 74.3597 40.7285 76.8741 45.8496 77.8927C50.9707 78.9114 56.2789 78.3886 61.1028 76.3904C65.9268 74.3923 70.0499 71.0085 72.9508 66.667C75.8517 62.3256 77.4 57.2214 77.4 52V50.1693L78.81 49.288C79.4349 48.8974 80.0078 48.4467 80.5192 47.9322L80.5262 47.9252L93.131 35.3262L94.4743 40.3466C95.4694 44.0661 96 47.9723 96 52C96 76.8534 75.8534 97 51 97C26.1465 97 6 76.8534 6 52C6 27.1465 26.1465 7 51 7C55.0277 7 58.9339 7.53058 62.6534 8.52574L67.6765 9.86969ZM52.9488 20.3488L61.878 11.4238C60.7392 11.1191 59.5814 10.861 58.4067 10.6518C56.0028 10.2236 53.5279 10 51 10C27.8034 10 9 28.8034 9 52C9 75.1966 27.8034 94 51 94C74.1966 94 93 75.1966 93 52C93 49.4717 92.7763 46.9965 92.348 44.5922C92.1388 43.4179 91.8808 42.2604 91.5762 41.122L82.647 50.047C81.9624 50.7358 81.2064 51.328 80.4 51.832V52C80.4 57.8148 78.6757 63.499 75.4452 68.3338C72.2147 73.1686 67.623 76.9368 62.2509 79.1621C56.8787 81.3873 50.9674 81.9695 45.2643 80.8351C39.5613 79.7007 34.3227 76.9006 30.2111 72.7889C26.0994 68.6773 23.2993 63.4387 22.1649 57.7357C21.0305 52.0326 21.6127 46.1213 23.8379 40.7491C26.0632 35.377 29.8314 30.7853 34.6662 27.5548C39.501 24.3243 45.1852 22.6 51 22.6H51.168C51.6739 21.7842 52.2714 21.0289 52.9488 20.3488ZM52.2612 27.8117V31.0714C52.2612 32.33 52.2418 33.5415 52.2227 34.7258C52.1906 36.7256 52.1598 38.648 52.2259 40.5891L54.6612 38.1564V29.2612H57.6612M73.7388 11.4406C74.3261 10.8529 75.0746 10.4526 75.8895 10.2904C76.7044 10.1281 77.5491 10.2112 78.3168 10.5292V10.5334C79.0834 10.8513 79.7387 11.3891 80.1999 12.079C80.6611 12.769 80.9076 13.5801 80.9082 14.41V22.096H88.59C89.4205 22.0962 90.2324 22.3426 90.9229 22.8041C91.6134 23.2656 92.1516 23.9215 92.4694 24.6889C92.7873 25.4562 92.8704 26.3005 92.7085 27.1151C92.5465 27.9297 92.1466 28.678 91.5594 29.2654L76.704 44.104C75.9165 44.8917 74.8484 45.3344 73.7346 45.3346H63.6L55.9224 53.0164C55.1343 53.8045 54.0654 54.2472 52.9509 54.2472C51.8364 54.2472 50.7675 53.8045 49.9794 53.0164C49.1913 52.2283 48.7486 51.1594 48.7486 50.0449C48.7486 48.9304 49.1913 47.8615 49.9794 47.0734L57.6612 39.4M64.8431 48.3346L62.4051 50.7739C64.3473 50.8403 66.2697 50.8094 68.271 50.7773C69.4557 50.7583 70.6681 50.7388 71.9286 50.7388H75.1883L74.9183 53.9873C74.5391 58.5489 72.8634 62.907 70.0887 66.5475C67.3139 70.188 63.556 72.9591 59.2581 74.534C54.9602 76.1089 50.3016 76.4218 45.8316 75.4359C41.3617 74.4501 37.2669 72.2065 34.0302 68.9698C30.7935 65.7331 28.5499 61.6383 27.5641 57.1684C26.5782 52.6984 26.8911 48.0398 28.466 43.7419C30.0409 39.444 32.812 35.6861 36.4525 32.9113C40.093 30.1366 44.4511 28.4609 49.0127 28.0817L52.2612 27.8117M64.8431 48.3346H73.7346C75.6433 48.3342 77.4743 47.5759 78.8241 46.2265C78.8246 46.226 78.8251 46.2255 78.8256 46.225L93.6795 31.3879L93.681 31.3864C94.6877 30.3795 95.3732 29.0967 95.6508 27.7002C95.9285 26.3038 95.7859 24.8563 95.2411 23.5409C94.6963 22.2254 93.7737 21.1011 92.5899 20.3099C91.4062 19.5187 90.0144 19.0963 88.5906 19.096H83.9082V14.4078C83.9071 12.9851 83.4846 11.5946 82.694 10.4118C82.3085 9.83519 81.844 9.32054 81.3168 8.88135V8.52463L79.4648 7.75755C78.1488 7.21247 76.7008 7.06998 75.3038 7.34809C73.9071 7.62614 72.6243 8.31212 71.6175 9.31928C71.6177 9.31906 71.6173 9.3195 71.6175 9.31928L56.7708 24.166M49.2612 31.0714C48.2469 31.1557 47.2441 31.3133 46.2601 31.5413C43.3722 32.2105 40.647 33.4864 38.271 35.2973C35.0856 37.7252 32.6609 41.0134 31.2828 44.7741C29.9048 48.5347 29.631 52.611 30.4936 56.5222C31.3563 60.4334 33.3194 64.0164 36.1515 66.8485C38.9836 69.6806 42.5666 71.6437 46.4778 72.5063C50.389 73.369 54.4653 73.0952 58.2259 71.7171C61.9866 70.3391 65.2748 67.9144 67.7027 64.729C69.5135 62.353 70.7895 59.6278 71.4587 56.7399C71.6867 55.7559 71.8443 54.7531 71.9286 53.7388C70.9262 53.7388 69.9206 53.7526 68.9136 53.7683C68.7605 53.7707 68.6073 53.7731 68.4541 53.7756C66.0187 53.8142 63.5777 53.8528 61.1598 53.722L58.8918 55.99C58.1116 56.7702 57.1854 57.389 56.1661 57.8113C55.1467 58.2335 54.0542 58.4508 52.9509 58.4508C51.8476 58.4508 50.7551 58.2335 49.7357 57.8113C48.7164 57.389 47.7902 56.7702 47.01 55.99C46.2298 55.2098 45.611 54.2836 45.1887 53.2643C44.7665 52.2449 44.5492 51.1524 44.5492 50.0491C44.5492 48.9458 44.7665 47.8532 45.1887 46.8339C45.611 45.8146 46.2298 44.8884 47.01 44.1082L49.278 41.8402C49.1471 39.4219 49.1859 36.9785 49.2245 34.5427C49.2269 34.3906 49.2293 34.2384 49.2316 34.0864C49.2473 33.079 49.2612 32.0732 49.2612 31.0714Z" fill="white"/>
+                        <path d="M51 10C54.7632 10 58.4088 10.4956 61.878 11.4238L52.9488 20.3488C52.2714 21.0289 51.6739 21.7842 51.168 22.6H51C45.1852 22.6 39.501 24.3243 34.6662 27.5548C29.8314 30.7853 26.0632 35.377 23.8379 40.7491C21.6127 46.1213 21.0305 52.0326 22.1649 57.7357C23.2993 63.4387 26.0994 68.6773 30.2111 72.7889C34.3227 76.9006 39.5613 79.7007 45.2643 80.8351C50.9674 81.9695 56.8787 81.3873 62.2509 79.1621C67.623 76.9368 72.2147 73.1686 75.4452 68.3338C78.6757 63.499 80.4 57.8148 80.4 52V51.832C81.2064 51.328 81.9624 50.7358 82.647 50.047L91.5762 41.122C92.5044 44.5912 93 48.2368 93 52C93 75.1966 74.1966 94 51 94C27.8034 94 9 75.1966 9 52C9 28.8034 27.8034 10 51 10ZM49.2612 31.0714C49.2612 34.6456 49.0848 38.2702 49.278 41.8402L47.01 44.1082C46.2298 44.8884 45.611 45.8146 45.1887 46.8339C44.7665 47.8532 44.5492 48.9458 44.5492 50.0491C44.5492 51.1524 44.7665 52.2449 45.1887 53.2643C45.611 54.2836 46.2298 55.2098 47.01 55.99C47.7902 56.7702 48.7164 57.389 49.7357 57.8113C50.755 58.2335 51.8476 58.4508 52.9509 58.4508C54.0542 58.4508 55.1467 58.2335 56.1661 57.8113C57.1854 57.389 58.1116 56.7702 58.8918 55.99L61.1598 53.722C64.7298 53.9152 68.3502 53.7388 71.9286 53.7388C71.5968 57.7302 70.1305 61.5435 67.7027 64.729C65.2748 67.9144 61.9866 70.3391 58.2259 71.7172C54.4653 73.0952 50.389 73.369 46.4778 72.5064C42.5666 71.6437 38.9836 69.6806 36.1515 66.8485C33.3194 64.0164 31.3563 60.4334 30.4936 56.5222C29.631 52.611 29.9048 48.5347 31.2828 44.7741C32.6609 41.0134 35.0856 37.7252 38.271 35.2973C41.4565 32.8695 45.2698 31.4032 49.2612 31.0714ZM78.3168 10.5334C79.0834 10.8513 79.7387 11.3891 80.1999 12.079C80.6611 12.769 80.9076 13.5801 80.9082 14.41V22.096H88.59C89.4205 22.0962 90.2324 22.3426 90.9229 22.8041C91.6134 23.2656 92.1516 23.9215 92.4694 24.6889C92.7873 25.4562 92.8704 26.3005 92.7085 27.1151C92.5465 27.9297 92.1466 28.678 91.5594 29.2654L76.704 44.104C75.9165 44.8917 74.8484 45.3344 73.7346 45.3346H63.6L55.9224 53.0164C55.1343 53.8045 54.0654 54.2472 52.9509 54.2472C51.8364 54.2472 50.7675 53.8045 49.9794 53.0164C49.1913 52.2283 48.7486 51.1594 48.7486 50.0449C48.7486 48.9304 49.1913 47.8615 49.9794 47.0734L57.6612 39.4V29.2612C57.6608 28.709 57.7692 28.1621 57.9804 27.6519C58.1916 27.1416 58.5013 26.678 58.8918 26.2876L73.7388 11.4406C74.3261 10.8529 75.0746 10.4526 75.8895 10.2904C76.7044 10.1281 77.5491 10.2112 78.3168 10.5292V10.5334Z" fill="#315AC5"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="textcon">
+                <h4>
+                    Objective
+                </h4>
+                <p>
+                    Create a functional and responsive recipe site that pulls from a database using PHP and database integration.There should only be two unique pages, the main recipe search page, and a recipe detail page that should fill in with the information of the selected recipe.
+                </p>
+            </div>
+        </div>
+        <div class="sec text-container1">
+            <div class="numcon">
+                <h2>
+                    3
+                </h2>
+            </div>
+            <div class="textcon">
+                <h3>
+                    Process
+                </h3>
+                <h4>
+                    Workflow
+                </h4>
+                <p>
+                    The process to building this website from scratch starts with some initial research involving studying popular recipe sites, talking to users of those sites. Next, the design consisted of designing it’s logo, fonts, color scheme, and sketches of the pages. Then, building the static page with HTML, CSS, and Javascript and later inserting PHP into it. Finally, making minor adjustments, debugging, and quality testing it.                </p>
+            </div>
+        </div>
+        <picture class="graphic">
+            <!-- Source for smaller screens -->
+            <source srcset="imgs-folder/workflow-img-mob.png" media="(max-width: 600px)">
+            <!-- Source for larger screens -->
+            <source srcset="imgs-folder/workflow-img.png">
+            <!-- Default image for browsers that don't support the picture element -->
+            <img src="imgs-folder/workflow-img.png" alt="Description of the image">
+        </picture>
+        <div class="text-container1">
+            <div class="numcon si">
+                <div class="small-icon">
+                    <svg width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51.5" cy="51.5" r="49" fill="white" stroke="#315AC5" stroke-width="5"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M85.7191 74C90.3136 67.3315 93 59.2712 93 50.5895C93 27.6202 74.196 9 51 9C27.804 9 9 27.6202 9 50.5895C9 59.2712 11.6864 67.3315 16.2809 74C19.5608 64.2187 40.2163 59.2943 51 59.2943C61.7837 59.2943 82.4392 64.2187 85.7191 74ZM68.5814 33.1799C68.5814 42.7987 60.7137 50.5895 51 50.5895C41.2863 50.5895 33.4186 42.7987 33.4186 33.1799C33.4186 23.5612 41.2863 15.7704 51 15.7704C60.7137 15.7704 68.5814 23.5612 68.5814 33.1799Z" fill="#315AC5"/>
+                        </svg>
+                    </div>
+            </div>
+            <div class="textcon">
+                <h4>
+                    User Research
+                </h4>
+                <p>
+                    One type of user I heavily considered when designing and building my site was one with diet limitations, involving consumption of meat. Various dietary restrictions especially on type of meat consumed due to:
+                </p>
+                <ul>
+                    <li>
+                        Religious beliefs
+                    </li>
+                    <li>
+                        Cultural upbringing
+
+                    </li>
+                    <li>
+                        Diet and health concerns
+                    </li>
+                    <li>
+                        Environmental and ethical reasons
+                    </li>
+                    <li>
+                        Personal preference
+                    </li>
+                </ul>
+                <p>
+                    Accounting for these users is vital because diverse diets are very common so I wanted to ensure that filtering could be very customizable to the user. Instead of allowing my users to only select one filter at a time, I'd instead challenge myself to make multiple filters that can be selected at once.
+                </p>
+            </div>
+        </div>
+        <div class="text-container1">
+            <div class="numcon si">
+                <div class="small-icon">
+                    <svg width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51.5" cy="51.5" r="49" fill="white" stroke="#315AC5" stroke-width="5"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M51 93C73.6437 93 92 74.6437 92 52C92 29.3563 73.6437 11 51 11C28.3563 11 10 29.3563 10 52C10 74.6437 28.3563 93 51 93ZM71.2667 23.9671L80.0356 32.7355C80.3413 33.0409 80.5839 33.4036 80.7493 33.8027C80.9148 34.2019 81 34.6298 81 35.0619C81 35.494 80.9148 35.9219 80.7493 36.3211C80.5839 36.7202 80.3413 37.0829 80.0356 37.3883L53.7291 63.6935C53.4235 63.9987 53.0607 64.2408 52.6615 64.4058C52.2623 64.5709 51.8346 64.6556 51.4026 64.6553H42.6338C41.7617 64.6553 40.9253 64.3088 40.3086 63.6922C39.6919 63.0756 39.3455 62.2392 39.3455 61.3671V52.5987C39.3433 51.7272 39.6873 50.8904 40.3018 50.2723L66.6083 23.9671C66.9138 23.6606 67.2768 23.4173 67.6765 23.2514C68.0762 23.0854 68.5047 23 68.9375 23C69.3703 23 69.7988 23.0854 70.1985 23.2514C70.5982 23.4173 70.9613 23.6606 71.2667 23.9671ZM73.0507 35.0619L68.9403 30.9517L65.926 33.9658L70.0364 38.076L73.0507 35.0619ZM45.9221 58.079H50.0325L65.3779 42.7343L61.2675 38.6241L45.9221 53.9688V58.079ZM78.8052 74.5197V53.851C78.8052 52.9789 78.4588 52.1425 77.8421 51.5259C77.2254 50.9092 76.389 50.5628 75.5169 50.5628C74.6448 50.5628 73.8084 50.9092 73.1917 51.5259C72.575 52.1425 72.2286 52.9789 72.2286 53.851V73.4237H30.5766V31.7737H50.1503C51.0224 31.7737 51.8588 31.4273 52.4755 30.8107C53.0922 30.194 53.4386 29.3577 53.4386 28.4856C53.4386 27.6135 53.0922 26.7772 52.4755 26.1605C51.8588 25.5439 51.0224 25.1974 50.1503 25.1974H29.4805C28.027 25.1974 26.633 25.7748 25.6052 26.8026C24.5774 27.8303 24 29.2242 24 30.6777V74.5197C24 75.9732 24.5774 77.3671 25.6052 78.3949C26.633 79.4226 28.027 80 29.4805 80H73.3247C74.7782 80 76.1722 79.4226 77.2 78.3949C78.2278 77.3671 78.8052 75.9732 78.8052 74.5197Z" fill="#315AC5"/>
+                        </svg>
+                    </div>
+            </div>
+            <div class="textcon">
+                <h4>
+                    Design
+                </h4>
+                <p>
+                    Early sketch of the detailed recipe page. This page included key information about the recipe such as how many it served, how many calories it contained, and how long it'd take to cook. While Each recipe had one entry for each of the described categories, it also had a different amount of ingredient items and steps. The layout had to account for recipes with as many as 15 ingredients or as little as 4 without making either look or feel inconsistent with other recipes depicted.
+                </p>
+            </div>
+        </div>
+        <picture class="graphic">
+            <!-- Source for smaller screens -->
+            <source srcset="imgs-folder/sketchbas-mob.png" media="(max-width: 600px)">
+            <!-- Source for larger screens -->
+            <source srcset="imgs-folder/sketchbas.png">
+            <!-- Default image for browsers that don't support the picture element -->
+            <img src="imgs-folder/sketchbas.png" alt="Description of the image">
+        </picture>
+        <div class="text-container1">
+            <div class="numcon si">
+                <div class="small-icon">
+                    <svg width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51.5" cy="51.5" r="49" fill="white" stroke="#315AC5" stroke-width="5"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M51 92.7573C73.6437 92.7573 92 74.401 92 51.7573C92 29.1136 73.6437 10.7573 51 10.7573C28.3563 10.7573 10 29.1136 10 51.7573C10 74.401 28.3563 92.7573 51 92.7573ZM60.7952 28.4471C60.3843 27.7919 59.6994 27.3095 58.8911 27.1061C58.4905 27.0051 58.0715 26.9758 57.6581 27.0199C57.2448 27.064 56.8452 27.1806 56.4823 27.363C56.1194 27.5454 55.8002 27.79 55.543 28.0829C55.2858 28.3758 55.0957 28.7112 54.9835 29.0699L40.9551 73.8093C40.8428 74.1677 40.8105 74.5423 40.8601 74.9119C40.9096 75.2814 41.0399 75.6386 41.2437 75.9631C41.4475 76.2875 41.7207 76.5729 42.0477 76.8028C42.3747 77.0328 42.7492 77.2029 43.1496 77.3034C43.5501 77.4038 43.9688 77.4327 44.3817 77.3884C44.7947 77.3441 45.1938 77.2274 45.5564 77.0451C45.9189 76.8627 46.2378 76.6183 46.4948 76.3256C46.7518 76.033 46.9418 75.6979 47.0541 75.3396L61.0825 30.6001C61.3095 29.8767 61.2061 29.1023 60.7952 28.4471ZM36.7681 40.181C36.7681 39.4296 36.4346 38.709 35.841 38.1776C35.2471 37.6463 34.4418 37.3479 33.6021 37.3479C32.7624 37.3479 31.9571 37.6463 31.3633 38.1776L17.9271 50.2012C17.3335 50.7326 17 51.4533 17 52.2047C17 52.9561 17.3335 53.6768 17.9271 54.2082L31.3633 66.2318C31.6575 66.4949 32.0068 66.7036 32.3911 66.8459C32.7754 66.9882 33.1873 67.0614 33.6032 67.0613C34.0192 67.0612 34.431 66.9877 34.8152 66.8451C35.1995 66.7026 35.5485 66.4937 35.8425 66.2304C36.1365 65.9671 36.3697 65.6546 36.5288 65.3107C36.6878 64.9668 36.7696 64.5982 36.7694 64.2259C36.7693 63.8537 36.6872 63.4852 36.5279 63.1414C36.3686 62.7975 36.1352 62.4852 35.841 62.2221L24.6468 52.2047L35.841 42.1845C36.4346 41.6531 36.7681 40.9325 36.7681 40.181ZM65.487 41.2647C65.6529 41.6104 65.8942 41.9231 66.1966 42.1845L77.3908 52.2047L66.1966 62.2221C65.6024 62.7534 65.2684 63.4742 65.2682 64.2259C65.2679 64.9777 65.6013 65.6987 66.195 66.2304C66.7888 66.7621 67.5943 67.061 68.4343 67.0613C69.2744 67.0616 70.0801 66.7632 70.6743 66.2318L84.1105 54.2082C84.7041 53.6768 85.0376 52.9561 85.0376 52.2047C85.0376 51.4533 84.7041 50.7326 84.1105 50.2012L70.6743 38.1776C70.3822 37.9069 70.0327 37.691 69.6464 37.5425C69.2601 37.394 68.8445 37.3158 68.4241 37.3126C68.0036 37.3093 67.5866 37.381 67.1974 37.5235C66.8083 37.666 66.4547 37.8764 66.1574 38.1424C65.86 38.4085 65.6249 38.7249 65.4657 39.0732C65.3065 39.4214 65.2263 39.7946 65.23 40.1708C65.2337 40.5471 65.321 40.919 65.487 41.2647Z" fill="#315AC5"/>
+                        </svg>
+                </div>
+            </div>
+            <div class="textcon">
+                <h4>
+                    Development
+                </h4>
+                <h5>
+                    Selecting Multiple Filters Challenge
+                </h5>
+                <p>
+                    One issue I encountered during my development with PHP was allowing for multiple filters to be selected at once. While I knew how to use filters to show one at a time using the url to display the current activated filter and the GET method to display only the selected protein, this wouldn't work for multiple filters.
+                </p>
+                <p>
+                    To enable multiple filters, I made my filters into a checkbox elements contained with a form that used the POST method with an apply filters button acting as submit and a clear filters button, deselecting them all and automatically submitting.
+                </p>
+                <p>
+                    Once apply filters is clicked, a function detects if there were one or multiple items submitted and formats them accordingly to be placed into a query that will only display the recipes with the selected proteins. If none were selected, then all recipes are displayed. Similarly to how the search function works as well.
+                </p>
+            </div>
+        </div>
+        <picture class="graphic endsec">
+            <!-- Source for smaller screens -->
+            <source srcset="imgs-folder/dev-expl-mob.png" media="(max-width: 600px)">
+            <!-- Source for larger screens -->
+            <source srcset="imgs-folder/dev-expl.png">
+            <!-- Default image for browsers that don't support the picture element -->
+            <img src="imgs-folder/dev-expl.png" alt="Description of the image">
+        </picture>
+        <div class="sec text-container1">
+            <div class="numcon">
+                <h2>
+                    4
+                </h2>
+            </div>
+            <div class="textcon">
+                <h3>
+                    Solution
+                </h3>
+                <h4>
+                    Main Page
+                </h4>
+                <h5>
+                    Filters
+                </h5>
+                <p>
+                    With multiple filters being selectable and an east clear filters that will deselect and show all the recipes again, they are also easily accessible and always present as the user scrolls down.
+                </p>
+                <h5>
+                    Thumbnails
+                </h5>
+                <p>
+                    Clear readability of the recipe's title, subtitle, and hero image and an aesthetic layout. All thumbnails remain a consistent height but can account for longer or shorter recipe titles and subtitles.
+                </p>
+            </div>
+        </div>
+        <picture class="graphic">
+            <!-- Source for smaller screens -->
+            <source srcset="imgs-folder/final-main-mob.png" media="(max-width: 600px)">
+            <!-- Source for larger screens -->
+            <source srcset="imgs-folder/final-main.png">
+            <!-- Default image for browsers that don't support the picture element -->
+            <img src="imgs-folder/final-main.png" alt="Description of the image">
+        </picture>
+        <div class="text-container1">
+            <div class="numcon si">
+                <div class="small-icon">
+                    <svg width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51.5" cy="51.5" r="49" fill="white" stroke="#315AC5" stroke-width="5"/>
+                        <circle cx="52" cy="52" r="38.5" fill="#315AC5" stroke="#315AC5" stroke-width="5"/>
+                        <path d="M34.5 32H29.5C28.1193 32 27 33.2472 27 34.7857V40.3571C27 41.8957 28.1193 43.1429 29.5 43.1429H34.5C35.8807 43.1429 37 41.8957 37 40.3571V34.7857C37 33.2472 35.8807 32 34.5 32Z" fill="white"/>
+                        <path d="M34.5 59.8571H29.5C28.1193 59.8571 27 61.1044 27 62.6429V68.2143C27 69.7528 28.1193 71 29.5 71H34.5C35.8807 71 37 69.7528 37 68.2143V62.6429C37 61.1044 35.8807 59.8571 34.5 59.8571Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22 34C22 30.6863 24.6863 28 28 28H34C37.3137 28 40 30.6863 40 34V40C40 43.3137 37.3137 46 34 46H28C24.6863 46 22 43.3137 22 40V34ZM34 34H28V40H34V34ZM46 31C46 29.3431 47.3431 28 49 28H79C80.6569 28 82 29.3431 82 31C82 32.6569 80.6569 34 79 34H49C47.3431 34 46 32.6569 46 31ZM46 43C46 41.3431 47.3431 40 49 40H64C65.6569 40 67 41.3431 67 43C67 44.6569 65.6569 46 64 46H49C47.3431 46 46 44.6569 46 43ZM22 64C22 60.6863 24.6863 58 28 58H34C37.3137 58 40 60.6863 40 64V70C40 73.3137 37.3137 76 34 76H28C24.6863 76 22 73.3137 22 70V64ZM34 64H28V70H34V64ZM46 61C46 59.3431 47.3431 58 49 58H79C80.6569 58 82 59.3431 82 61C82 62.6569 80.6569 64 79 64H49C47.3431 64 46 62.6569 46 61ZM46 73C46 71.3431 47.3431 70 49 70H64C65.6569 70 67 71.3431 67 73C67 74.6569 65.6569 76 64 76H49C47.3431 76 46 74.6569 46 73Z" fill="white"/>
+                        </svg>
+                </div>
+            </div>
+            <div class="textcon">
+                <h4>
+                    Recipe Details Page
+                </h4>
+                <h5>
+                    Clarity
+                </h5>
+                <p>
+                    The recipe page includes lots of information broken down into quickly digestible pieces and easy to follow step-by-step instructions with a clear number, description, and image.
+                </p>
+            </div>
+        </div>
+        <picture class=" graphic endsec">
+            <!-- Source for smaller screens -->
+            <source srcset="imgs-folder/final-detail-mob.png" media="(max-width: 600px)">
+            <!-- Source for larger screens -->
+            <source srcset="imgs-folder/final-detail.png">
+            <!-- Default image for browsers that don't support the picture element -->
+            <img src="imgs-folder/final-detail.png" alt="Description of the image">
+        </picture>
+        <div class="sec text-container1">
+            <div class="numcon">
+                <h2>
+                    5
+                </h2>
+            </div>
+            <div class="textcon">
+                <h3>
+                    Results
+                </h3>
+                <p>
+                    Overall, this project was successful in achieving all of my goals. It is functional and gives the user two different ways to search through the recipes. Recipes are presented with clarity and effectively convey information to the user.
+                </p>
+                <p>
+                    Now that I feel more comfortable with using PHP and database integration, I'd love to improve the overall branding of the site and enable more ways to filter and overall filter categories beyond just protein choices.
+                </p>
+            </div>
+        </div>
+        <div id="vertbar">
+        </div>
+    </main>
+    <footer>
+        <h5>
+            &copy; Eli Goldberg 2023
+        </h5>
+    </footer>
+</body>
+</html>
